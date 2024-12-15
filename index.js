@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.sendFile('public/INST377_Home_Page_Final.html', 'public/INST377_Stock_Page_Final.html', 'public/INST377_About_Page_Final.html',{ root: __dirname });
+    res.sendFile('public/INST377_Home_Page_Final.html', { root: __dirname });
   });
 
 app.post('/api/setup-account', async (req, res) => {
